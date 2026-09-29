@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="en" style="width: 1280px; min-height: 100%; position: relative;"><head>
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>WingleHub — Create your space. Find your people.</title>
@@ -67,11 +67,16 @@
                   inset -5px -5px 12px rgba(203, 213, 225, 0.6),
                   0 20px 40px -10px rgba(15, 23, 42, 0.16),
                   0 6px 14px -3px rgba(0, 0, 0, 0.08);
-      border-radius: 32px;
+      border-radius: 28px;
       border: 1px solid rgba(255, 255, 255, 0.7);
     }
+    @media (min-width: 640px) {
+      .clay-surface-light {
+        border-radius: 32px;
+      }
+    }
     .clay-surface-light:hover {
-      transform: translateY(-6px) scale(1.01);
+      transform: translateY(-4px) scale(1.01);
       box-shadow: inset 3px 3px 6px rgba(255, 255, 255, 1),
                   inset -6px -6px 14px rgba(191, 219, 254, 0.65),
                   0 28px 48px -10px rgba(0, 102, 255, 0.22),
@@ -82,7 +87,7 @@
       box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.95),
                   inset -3px -3px 6px rgba(199, 210, 254, 0.7),
                   0 8px 16px -4px rgba(0, 0, 0, 0.08);
-      border-radius: 22px;
+      border-radius: 20px;
     }
     .clay-surface-dark {
       background: linear-gradient(135deg, #1b263b 0%, #111a2c 60%, #0d1524 100%);
@@ -90,7 +95,7 @@
                   inset -4px -5px 12px rgba(0, 0, 0, 0.6),
                   0 20px 40px -12px rgba(0, 0, 0, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 28px;
+      border-radius: 24px;
     }
     .clay-pill-btn {
       background: linear-gradient(135deg, #2563eb 0%, #0066FF 50%, #004ecc 100%);
@@ -131,8 +136,8 @@
     }
     /* Clay Phone Mockup Frame */
     .phone-mockup-clay {
-      border: 8px solid #1a2538;
-      border-radius: 42px;
+      border: 6px solid #1a2538;
+      border-radius: 36px;
       overflow: hidden;
       background: #000;
       box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.2),
@@ -140,16 +145,27 @@
                   0 24px 48px -12px rgba(0, 0, 0, 0.65),
                   0 8px 18px -4px rgba(0, 102, 255, 0.18);
     }
+    @media (min-width: 640px) {
+      .phone-mockup-clay {
+        border-width: 8px;
+        border-radius: 42px;
+      }
+    }
     .clay-step-pedestal {
       background: linear-gradient(135deg, #152033 0%, #0c1424 100%);
       box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.12),
                   inset -4px -4px 10px rgba(0, 0, 0, 0.55),
                   0 20px 35px -10px rgba(0, 0, 0, 0.5);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 36px;
+      border-radius: 28px;
+    }
+    @media (min-width: 640px) {
+      .clay-step-pedestal {
+        border-radius: 36px;
+      }
     }
     .clay-nav-shell {
-      background: linear-gradient(135deg, rgba(16, 25, 44, 0.88) 0%, rgba(11, 17, 32, 0.92) 100%);
+      background: linear-gradient(135deg, rgba(16, 25, 44, 0.92) 0%, rgba(11, 17, 32, 0.95) 100%);
       box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.18),
                   inset -2px -2px 6px rgba(0, 0, 0, 0.5),
                   0 16px 36px -8px rgba(0, 0, 0, 0.5);
@@ -162,86 +178,93 @@
                   0 30px 60px -15px rgba(0, 0, 0, 0.7),
                   0 10px 24px -5px rgba(0, 102, 255, 0.25);
       border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 40px;
+      border-radius: 32px;
+    }
+    @media (min-width: 640px) {
+      .clay-cta-card {
+        border-radius: 40px;
+      }
     }
   </style>
 </head>
-<body class="bg-wingle-navy text-slate-100 antialiased selection:bg-wingle-blue selection:text-white">
+<body class="bg-wingle-navy text-slate-100 antialiased selection:bg-wingle-blue selection:text-white overflow-x-hidden min-h-screen">
 <!-- NAVBAR (Clay pill floating style) -->
-<header class="sticky top-0 z-50 pt-3 pb-3 px-4 sm:px-6 transition-all duration-300">
-<div class="max-w-7xl mx-auto clay-nav-shell backdrop-blur-xl rounded-full px-5 sm:px-8 h-20 flex items-center justify-between">
+<header class="sticky top-0 z-50 pt-3 pb-3 px-3 sm:px-6 transition-all duration-300">
+<div class="max-w-7xl mx-auto clay-nav-shell backdrop-blur-xl rounded-full px-4 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
 <!-- Logo -->
-<a class="flex items-center gap-3 group" href="#">
-<div class="w-11 h-11 rounded-2xl bg-white p-1.5 flex items-center justify-center shadow-lg transition-transform group-hover:scale-105" style="box-shadow: inset 2px 2px 4px rgba(255,255,255,0.9), inset -2px -2px 5px rgba(148,163,184,0.4), 0 8px 16px rgba(0,0,0,0.25);">
-<img alt="WingleHub Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoFxcne9YEjf4H4eGUkIFgowa8HV_kPfn9D7dxsSo5fcQc9ew7Geqc6IjIRkKS3MN8Hl0nD8q_zs1Ict-kZ182GlQZpGhdgp1IOut2-UoIBDTAo2uz5nZxyGGeJsYoE8fNxWMbZ1qhjdTQmGjPY9nRSKXjkFh-llKO8tXX0ah9cW2WIK84aWcUU0N4VlgAYq8YpyGp_2CVu6OMCLe3yDA8b2z6TmZrjHGjSKtS_MFiHpmlkuP7THmDwuCXtERbyz12ZrA">
+<a class="flex items-center gap-2.5 sm:gap-3 group shrink-0" href="#">
+<div class="w-9 h-9 sm:w-11 sm:h-11 rounded-2xl bg-white p-1 sm:p-1.5 flex items-center justify-center shadow-lg transition-transform group-hover:scale-105" style="box-shadow: inset 2px 2px 4px rgba(255,255,255,0.9), inset -2px -2px 5px rgba(148,163,184,0.4), 0 8px 16px rgba(0,0,0,0.25);">
+<img alt="WingleHub Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiSwRr4xvetN5DbBRVAuOJLbZmRU4YMHsAnVLQQCJoqU7J1viRPKgrU_41eyySWGr5fsNvFvfQZo7fTMG65ieX5BdcQ2OLSQbLefkPMAGnL06ZYGTDMo3pxxUs9dpHNUni4wIBNsgAE2Pujr1iB-xr3o4nWbCNJGYHXJFBBY5n3hMGgoUlceeRqUEms4Kxu5qM4qxaVO3lDkHHZU8Rtpa92u0Yvcl4lg4mXLVV53KqBKn0h4bjzgyiHEwEPTv6R2HwKZk">
 </div>
-<span class="text-2xl font-bold tracking-tight text-white font-display">WingleHub</span>
+<span class="text-xl sm:text-2xl font-bold tracking-tight text-white font-display">WingleHub</span>
 </a>
-<!-- Desktop Nav -->
-<!-- CTA Button (Pillowy 3D Clay Pill) -->
-<div class="flex items-center gap-4">
-<a class="clay-pill-btn hidden sm:inline-flex items-center justify-center px-7 py-3 rounded-full text-white font-bold text-sm tracking-wide" href="[APP_DOWNLOAD_LINK]">
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-300">
+
+
+
+
+
+</nav>
+<!-- CTA Button & Mobile Menu Toggle -->
+<div class="flex items-center gap-3">
+<a class="clay-pill-btn hidden sm:inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-white font-bold text-xs sm:text-sm tracking-wide" href="[APP_DOWNLOAD_LINK]">
           Download App
         </a>
 <!-- Mobile Menu Button -->
-<button class="md:hidden p-2.5 rounded-2xl clay-badge-pill text-slate-300 hover:text-white focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" type="button">
+<button aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-2xl clay-badge-pill text-slate-300 hover:text-white focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" type="button">
 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </button>
 </div>
 </div>
 <!-- Mobile dropdown -->
-<div class="hidden md:hidden mt-3 max-w-7xl mx-auto px-6 py-6 clay-surface-dark rounded-3xl space-y-3" id="mobile-menu">
-<a class="block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60" href="#features">Features</a>
-<a class="block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60" href="#communities">Communities</a>
-<a class="block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60" href="#quizzes">Quizzes</a>
-<a class="block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60" href="#music">Music Rooms</a>
-<a class="block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60" href="#contact">Connect</a>
-<a class="block w-full text-center py-3.5 rounded-full clay-pill-btn font-bold text-white" href="[APP_DOWNLOAD_LINK]">Download WingleHub</a>
+<div class="hidden md:hidden mt-3 max-w-7xl mx-auto px-5 py-5 clay-surface-dark rounded-3xl space-y-2.5 border border-white/10" id="mobile-menu">
+<a class="block px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium" href="#communities" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Communities</a>
+<a class="block px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium" href="#quizzes" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Quizzes</a>
+<a class="block px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium" href="#music" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Music Rooms</a>
+<a class="block px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium" href="#leaderboard" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Leaderboard</a>
+<a class="block px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium" href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+<a class="block w-full text-center py-3 rounded-full clay-pill-btn font-bold text-white text-sm mt-3" href="[APP_DOWNLOAD_LINK]">Download WingleHub</a>
 </div>
 </header>
 <!-- HERO SECTION -->
-<section class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden bg-gradient-to-b from-wingle-navy via-[#0d1729] to-wingle-navy">
+<section class="relative pt-8 pb-16 sm:pt-14 sm:pb-24 lg:pt-20 lg:pb-32 overflow-hidden bg-gradient-to-b from-wingle-navy via-[#0d1729] to-wingle-navy">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
 <!-- Text Column -->
-<div class="lg:col-span-7 space-y-8 text-center lg:text-left z-10">
-<h1 class="text-4xl sm:text-6xl lg:text-6xl font-extrabold tracking-tight text-white font-display leading-[1.12]">Your ultimate <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-300">community,</span> <span class="relative inline-block text-white">quiz,</span> and <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">hangout hub.</span></h1>
-<p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed"></p><div class="n6owBd awi2gc" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 400; margin: 12px 0px 16px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-hveid="CAAIBxAA" data-processed="true" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="TDBkbc#Ml18Xb" jsuid="HSoox_o" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; margin: 12px 0px 16px; border-bottom: 0px rgb(230, 232, 240);"><span class="rQesXe MPyX" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="tP2kf#s32ZS" jsuid="HSoox_p" style="font-weight: 700; margin: 0px; border-bottom: 0px rgb(230, 232, 240);"><span class="" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-subtree="aimfl" style="margin: 0px; border-bottom: 0px rgb(230, 232, 240);">The ultimate social platform to join communities, create instant AI quizzes, and hang out in live music rooms.</span><!--TgQPHd|||[]--></span><!--TgQPHd|||[]--></div><div aria-owns="action-menu-parent-container" class="n6owBd awi2gc" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 400; margin: 12px 0px 16px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-hveid="CAAICBAA" data-processed="true" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="TDBkbc#Ml18Xb" jsuid="HSoox_w" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; margin: 12px 0px 16px; border-bottom: 0px rgb(230, 232, 240);"></div><p class=""></p>
+<div class="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left z-10">
+<h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-display leading-[1.12]">Your ultimate <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-300">community,</span> <span class="relative inline-block text-white">quiz,</span> and <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">hangout hub.</span></h1>
+<p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            The ultimate social platform to join communities, create instant AI quizzes, and hang out in live music rooms.
+          </p>
 <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-<a class="clay-pill-btn w-full sm:w-auto px-9 py-4 rounded-full text-white font-bold text-base flex items-center justify-center gap-3" href="[APP_DOWNLOAD_LINK]">
-<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.5 12a1 1 0 0 1-1 1H13v3.5a1 1 0 0 1-2 0V13H7.5a1 1 0 0 1 0-2H11V7.5a1 1 0 0 1 2 0V11h3.5a1 1 0 0 1 1 1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path></svg>
+<a class="clay-pill-btn w-full sm:w-auto px-8 sm:px-9 py-3.5 sm:py-4 rounded-full text-white font-bold text-base flex items-center justify-center gap-3" href="[APP_DOWNLOAD_LINK]">
+<svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M17.5 12a1 1 0 0 1-1 1H13v3.5a1 1 0 0 1-2 0V13H7.5a1 1 0 0 1 0-2H11V7.5a1 1 0 0 1 2 0V11h3.5a1 1 0 0 1 1 1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path></svg>
 <span class="">Download WingleHub</span>
 </a>
 </div>
-<!-- Social Proof Stats -->
-<div class="grid grid-cols-3 gap-6 pt-6 border-t border-white/10 max-w-md mx-auto lg:mx-0">
-<div>
 </div>
-<div>
-</div>
-<div>
-</div>
-</div>
-</div>
-<!-- Hero Mockups Gallery with Parallax Float & Claymorphic Frames -->
-<div class="lg:col-span-5 relative flex items-center justify-center">
+<!-- Hero Mockups Gallery with Responsive Flex & Claymorphic Frames -->
+<div class="lg:col-span-5 relative flex items-center justify-center pt-4 sm:pt-6 lg:pt-0">
 <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/25 to-purple-600/25 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative flex items-center justify-center max-w-full">
 <!-- Secondary Mockup (Back Left - Leaderboard) -->
-<div class="w-48 sm:w-56 -mr-16 sm:-mr-20 z-0 animate-float-reverse opacity-85 hover:opacity-100 transition-opacity">
+<div class="w-28 sm:w-44 md:w-52 lg:w-56 -mr-8 sm:-mr-16 lg:-mr-20 z-0 animate-float-reverse opacity-75 sm:opacity-85 hover:opacity-100 transition-opacity shrink-0">
 <div class="phone-mockup-clay rotate-[-6deg] hover:rotate-0 transition-transform duration-500">
-<img alt="WingleHub Leaderboard Screen" class="w-full h-auto block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLF71dMVdP5NxBaU_UJUnm-NlHQT7yp_XDhACE4Z19MDSARk1n1She57nOcD1MkAt5da7c1vhq-rsfl9XBUm-EshBrCBPClq1AzfDMZF93dJvEsDD9qc18skfgEfHWHdqswTOra1PPqPgd54cfEupfIhuJtYXW6Yd7qLP4IzzKNqdXD99lUAxOTs70gf2gsR9Nb0nqcr0cFhuJOlDcnXjKfvt7cgr8TPPGgwdMRVC6C0aXUcA9g9dmKk7ovKIIfYuVcWM">
+<img alt="WingleHub Leaderboard Screen" class="w-full h-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4l9f_MBv40osOFNSzULOnw0PYVNS8YuSFmqGx_P_cBgg2sc_Rr_jUvsp1lghhDN-t3kqMpQ14N07V_bsNsUyd_GA1nLV-nFOmwilqhVzReiGIctRkN3GvGBeIxRMWv6qgdH7a1KfgfCu77wya-8CN8kygVan3u8LMYL3uJQx2Ams5dJRkedvyRfiuwHgnW1jcpADdhF0X-x0IrSDM-jrZlhMfYMdcdGUmlDJhGLPy1G8EDkFDOIhngDYq8ZEcD53MuT0">
 </div>
 </div>
 <!-- Primary Hero Mockup (Front Center - Feed) -->
-<div class="w-56 sm:w-64 z-20 animate-float-slow">
+<div class="w-40 sm:w-56 md:w-60 lg:w-64 z-20 animate-float-slow shrink-0">
 <div class="phone-mockup-clay hover:scale-105 transition-transform duration-500 ring-2 ring-blue-400/20">
-<img alt="WingleHub Cyber Squad Feed" class="w-full h-auto block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMv0iW-mVomxJwbWJQW8yv3z-LLn8ll30kHWzsRSUEH2MKA0vicvwdukhYMV1fJe39Dfli44IkE347nXGwxt15LtnjCsKD_5H_mKDV2r9l4h-b8yQ-JHwwJHcBj_ygE4qNJ2DuYDTdDR9Kc61s0vkjlOd1BmcKvaTQxegnFXiZCitzc7gX3lXNW1yu-xOcSgVh16eO-9o-ZOkz4s1756CPQAd38wSH4hYQWN2IheF5rdDZWQ15osOLpPCVj3MHe22DSo0">
+<img alt="WingleHub Cyber Squad Feed" class="w-full h-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuk4AfgtH2IGBhm0j8EjiehT4YiyjtFWIM15dfdafjoRI-HN41wPFupFk3G2V6PRqkInvL7R8nCAqgmmKoKW6LgOcqZk9z6q6QocaMrbxkZnZhJGi73ibPOcwDLw5pKy2PwxoSmru2nssLXQjI_jqj83cHzbZCFQpIBR47CkE4vjv1w4kaCbQiv6XXqIQrPJHEA_sFp5t9Mn5jNXu16NRbVLpiFF5Py0XPyK4BYhzdueSwlE43duVVWiM7yl9wZFqDhok">
 </div>
 </div>
 <!-- Secondary Mockup (Back Right - Music Room) -->
-<div class="w-48 sm:w-56 -ml-16 sm:-ml-20 z-10 animate-float-slow opacity-85 hover:opacity-100 transition-opacity">
+<div class="w-28 sm:w-44 md:w-52 lg:w-56 -ml-8 sm:-ml-16 lg:-ml-20 z-10 animate-float-slow opacity-75 sm:opacity-85 hover:opacity-100 transition-opacity shrink-0">
 <div class="phone-mockup-clay rotate-[6deg] hover:rotate-0 transition-transform duration-500">
-<img alt="WingleHub Music &amp; Voice Room" class="w-full h-auto block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2w-otfWpjn5SmOnvZZvmQ4WriQaadhowQVCaWeh4E4nSiFGryz1B1SntKoM9gS-UTRHZV6Wvn73kv0QLQns-qhJf6ask8ZZAEwxH47bww9Y_N7V6D_WO89Kcz1DPUTm7KFXGpS-j9-tJnoRfSbI_uA7AYfvA98v0zCPr3txuO9ms_daROGUWzS1Wmb50MwjaUcuNp_SYHGF6IvnWziO0RlhcwUwKSHHUKCHDk4YGgcIctFEmtQ33m-SYdjVfbs908FfQ">
+<img alt="WingleHub Music &amp; Voice Room" class="w-full h-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4hsdqCFyNzMRbStQRP4WlIenNVG69W2GizHJ9XqQjScz2sC-BJx0tphCkH18WCzadmSHMHcNfDp52XRgGU7G0K8Hr4r4KFXdwm0QqZbWgEpPgl7siyPVFYUoRLP5ixjsEIL0soJ2UQMa6GLmg3a917NxS8jO8oXIzduW5XRdIzLKPWZmp-KpOp9cf2uM0mgnByccbjS445g87a3eDhRN_wOLh541xGqcmTdpMeE8uuEMY4ueEG2Hec_oQPlWdyYw6VSk">
+</div>
 </div>
 </div>
 </div>
@@ -249,37 +272,37 @@
 </div>
 </section>
 <!-- FEATURE SECTION 1: COMMUNITIES & SQUADS -->
-<section class="py-24 bg-slate-900/60 border-t border-wingle-border" id="communities">
+<section class="py-16 sm:py-24 bg-slate-900/60 border-t border-wingle-border" id="communities">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 <!-- Mockups Preview -->
-<div class="lg:col-span-6 order-2 lg:order-1 flex justify-center items-center gap-6">
-<div class="w-56 sm:w-64 phone-mockup-clay transition-all duration-300 hover:scale-102">
-<img alt="Explore Communities Screen" class="w-full h-auto block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqK-ov3LWFHzQMQQsTlW5iEGwsm13Fv_3G_NofkwFmxIjy-RHY3tAHDOiSbC5Xehn5BJFlB8s9UDlxl1QqdCRuQ4dFsQSj5RViMsksbKoVrmevtMrx0um2RFHuc9gdXt8Oytt10k9QkSRZ53LmWuw0O-oUD6cpxR5IKG-t9MvYJZj0R1gYMX4z38ZvKgp9mSFtJKk6XY40VtYtQdQ5SDZ2CAV6UDby19e-D6DCwdYEnOc4s1SoMESqed7IiiHNQBTpu6Q">
+<div class="lg:col-span-6 order-2 lg:order-1 flex justify-center items-center gap-4 sm:gap-6">
+<div class="w-44 sm:w-56 md:w-64 max-w-[280px] phone-mockup-clay transition-all duration-300 hover:scale-102 shrink-0">
+<img alt="Explore Communities Screen" class="w-full h-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGkZTJspuyNlLCalNzjnjoM96GCuuSQ85DaE40BUbMErMZWycFTSa0jmAOgLSaDtf01aa_leWni6X7Wox3bLsrJuX3WlX1qvdf7cJZQs8xCeHzVSke3l6lTzWZpAKuZVGyIWBCAqn0K3QQpPA6VoJdWBRJd26mEfh8T6NiFm8ppVOrrslUPAxlg8KExO6DC3MyIsD1dllgfvN3IW450MVue8S0hIdSooeUVaqaSGIwfgdyXHiYxeVXmttXdZceSehfFJ8">
 </div>
-<div class="w-56 sm:w-64 phone-mockup-clay hidden sm:block mt-12 transition-all duration-300 hover:scale-102">
-<img alt="Create Community Screen" class="w-full h-auto block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDot5xAFgki787fMV_V5vvWeid-CCo55KUoKWpEX7X1OdRb4r5vNz9vRxewqHIar3MRhQMBwWJTZtk-ZNsGuBp_QB0W4jralXdBWtEKEG7cJ0lXiz2ligtMNW8GZ8PPqj0ClvTEbvpNK9ECnLX9fo5A2ypYpmPGiZgYdRLhDYzh0vVpxSnMqoCCRiR5BQYaLCGbcmjQz9S3sWnMGDjN5UgbybsQSUl9KeSBo9pNBqhqKRI3TYYp4GTL0NjpNmwpPejDKZc">
+<div class="w-44 sm:w-56 md:w-64 max-w-[280px] phone-mockup-clay mt-8 sm:mt-12 transition-all duration-300 hover:scale-102 shrink-0">
+<img alt="Create Community Screen" class="w-full h-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQYnY9BOBQFK_rcY5H7HLbpF5v2NP8PGVjDbfF8bYoCpk-Gxjgo0ptrdp5joaiwiDv6nqYuEAH_z5NqSYbF8OnC_e7iNSso7UnBETiWEuqj_1TaemQH9HeLIqZH4P7lEo5MyJxwSW3uh7FCxwAJqw9iN_MxgHePjuVehQxMnwHJa6Hn0NZJpXVr0hrkUfW6ezCvPUu-kfHZd2fgIcC3wdDhElCgK6Cvano8vLbRZB9Fx7ZKaobcR0_wpoagj3AT9NBc9M">
 </div>
 </div>
 <!-- Copy Column -->
-<div class="lg:col-span-6 order-1 lg:order-2 space-y-6">
-<div class="w-14 h-14 rounded-2xl clay-badge-icon flex items-center justify-center text-blue-400">
-<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<div class="lg:col-span-6 order-1 lg:order-2 space-y-5 sm:space-y-6 text-left">
+<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl clay-badge-icon flex items-center justify-center text-blue-400">
+<svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </div>
-<h2 class="font-extrabold tracking-tight text-white font-display leading-[1.12] text-3xl sm:text-4xl lg:text-5xl">Vibrant Communities Built Around Your Passions</h2>
-<p class="text-base sm:text-lg text-slate-300 leading-relaxed">Create public or private communities in seconds. From tech and gaming to art and music, share posts, express your thoughts, and connect with like-minded peers in a clean, distraction-free environment.</p>
-<ul class="space-y-4 pt-2 text-sm text-slate-300">
-<li class="flex items-center gap-3">
-<div class="w-6 h-6 rounded-full clay-badge-pill text-blue-400 flex items-center justify-center font-bold text-xs">✓</div>
-<span class=""><span class="rQesXe MPyX" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="tP2kf#s32ZS" jsuid="zxkkp_3c" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; border-bottom: 0px rgb(230, 232, 240);">Explore &amp; Join:<!--TgQPHd|||[]--></span> Discover trending groups or create your own space tailored to your unique interests</span>
+<h2 class="font-extrabold tracking-tight text-white font-display leading-[1.15] text-2xl sm:text-4xl lg:text-5xl">Vibrant Communities Built Around Your Passions</h2>
+<p class="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed">Create public or private communities in seconds. From tech and gaming to art and music, share posts, express your thoughts, and connect with like-minded peers in a clean, distraction-free environment.</p>
+<ul class="space-y-3.5 sm:space-y-4 pt-1 sm:pt-2 text-xs sm:text-sm text-slate-300">
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full clay-badge-pill text-blue-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</div>
+<span class=""><strong class="text-white">Explore &amp; Join:</strong> Discover trending groups or create your own space tailored to your unique interests.</span>
 </li>
-<li class="flex items-center gap-3">
-<div class="w-6 h-6 rounded-full clay-badge-pill text-blue-400 flex items-center justify-center font-bold text-xs">✓</div>
-<span class=""><span class="rQesXe MPyX" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="tP2kf#s32ZS" jsuid="zxkkp_3k" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; border-bottom: 0px rgb(230, 232, 240);">Public &amp; Private Hubs:<!--TgQPHd|||[]--></span> Flexible privacy settings let you open your community to the world or keep it invite-only.</span>
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full clay-badge-pill text-blue-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</div>
+<span class=""><strong class="text-white">Public &amp; Private Hubs:</strong> Flexible privacy settings let you open your community to the world or keep it invite-only.</span>
 </li>
-<li class="flex items-center gap-3">
-<div class="w-6 h-6 rounded-full clay-badge-pill text-blue-400 flex items-center justify-center font-bold text-xs">✓</div>
-<span class=""><span class="rQesXe MPyX" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="tP2kf#s32ZS" jsuid="zxkkp_3s" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; border-bottom: 0px rgb(230, 232, 240);">Interactive Feeds:<!--TgQPHd|||[]--></span> Share updates, post media, and engage with your tribe through seamless discussions.</span>
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full clay-badge-pill text-blue-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</div>
+<span class=""><strong class="text-white">Interactive Feeds:</strong> Share updates, post media, and engage with your tribe through seamless discussions.</span>
 </li>
 </ul>
 </div>
@@ -287,232 +310,225 @@
 </div>
 </section>
 <!-- FEATURE SECTION 2: AI QUIZZES & LEARNING ENGINE -->
-<section class="py-24 bg-wingle-navy border-t border-wingle-border" id="quizzes">
+<section class="py-16 sm:py-24 bg-wingle-navy border-t border-wingle-border" id="quizzes">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full clay-badge-pill text-amber-400 text-xs font-bold uppercase tracking-wider">
+<div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3 sm:space-y-4">
+<div class="inline-flex items-center gap-2 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full clay-badge-pill text-amber-400 text-xs font-bold uppercase tracking-wider">
           AI QUIZ CREATOR
         </div>
-<h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white font-display">
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white font-display">
           Generate. Challenge. Learn. Share.
         </h2>
-<p class="text-slate-300 text-base sm:text-lg">
+<p class="text-slate-300 text-sm sm:text-base lg:text-lg">
           Turn any topic into an instant quiz in seconds. Just type your topic, choose the number of questions, select your difficulty (Easy, Medium, Hard), and create! Master concepts with step-by-step AI explanations while making your quiz visible to everyone across the app.
         </p>
 </div>
 <!-- 3-Step Screen Transition Showcase with Clay Pedestals -->
-<div class="grid md:grid-cols-3 gap-8 items-start">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-start">
 <!-- Step 1: Create Quiz -->
-<div class="clay-step-pedestal p-6 space-y-5 text-center group transition-all duration-300 hover:translate-y-[-6px]">
-<div class="w-56 mx-auto phone-mockup-clay">
-<img alt="Creating Quiz Screen" class="w-full h-auto block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg6EMDwX5EUmxz7za_rHxjgliVq8LPWkbdI8Ud6Liekmo1NYbwFDZfIhEc7v_FXatLHS9-9BuRzJlVt2ZqGc9VknRO-qQiiPWKAPFwEkuSDTvffImMwy2nsak8ESDtk8-yHeEF7CLK-VsOBb1FxFV2UZA0Q9IONTpesAj-_uQ2x9d82M-iEx8YL6GxI4lnTNqLBnro6bpXfQJhQG59jVhEAMEt-KWhrOcm6UqhnqH7Ny8wblRSCySLEAXQqanZDd7jM08">
+<div class="clay-step-pedestal p-5 sm:p-6 space-y-4 sm:space-y-5 text-center group transition-all duration-300 hover:translate-y-[-6px]">
+<div class="w-full max-w-[240px] sm:max-w-[260px] mx-auto phone-mockup-clay">
+<img alt="Creating Quiz Screen" class="w-full h-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASBiQjRINnMPWYxzUu8pR5eyQ0tjGVeZMNfWRlz_M19MAhM4nnPHzBnhNIINFZDhWLYoYpgVyznHIEUNK5SYKGuDk6eIHL6TkZ2-vIEJ9P8YpR4P03l3cBPiHOaNdHhKDOS2cGj7bMprmPPz1YGiqIRCRaqG6dFHc9J61_f-Jgiwe4PbFq40z42_35ngWN06iMtjFbUSjEPEzaSDd8eqdMTHgx7ZJJ6vcw_KbvU8qlvWp9uci_kf1RZKikFPpGz_3sPsk">
 </div>
 <div class="pt-2">
 <span class="inline-block px-3 py-1 rounded-full clay-badge-pill text-xs font-bold text-blue-400 uppercase tracking-widest">Step 01</span>
-<h3 class="text-lg font-bold text-white mt-2">Configure &amp; Generate</h3>
-<p class="text-xs text-slate-400 mt-1.5 max-w-xs mx-auto">Select study topic, number of questions (up to 200 XP), and target difficulty.</p>
+<h3 class="text-base sm:text-lg font-bold text-white mt-2">Configure &amp; Generate</h3>
+<p class="text-xs sm:text-sm text-slate-400 mt-1.5 max-w-xs mx-auto">Select study topic, number of questions (up to 200 XP), and target difficulty.</p>
 </div>
 </div>
 <!-- Step 2: Attempt Quiz -->
-<div class="clay-step-pedestal p-6 space-y-5 text-center group transition-all duration-300 hover:translate-y-[-6px]">
-<div class="w-56 mx-auto phone-mockup-clay">
-<img alt="Attempting Quiz Screen" class="w-full h-auto block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5hxhIUtNpYXG5jAelc5PcvAelBeU-_rXPiUpdBaprg5F2XoR26d9uB4KP3S0aU81ukLAT5-URZh9iX3DhFjCKlGuYFepIjUveG2b0XMRCJjNNzeqgdy2256shwx9rUSkhOY88g188FDThbaRcPXCPx2m4pcrVXc73NllJw1TfqWz74REDM7CPQnpLbVazIl41PB5snEpwCd1GYj8vhDH5Ydv6vaYnuNyML9BOp6K4Duwo303aYmSLYBDepNj9GggGjE0">
+<div class="clay-step-pedestal p-5 sm:p-6 space-y-4 sm:space-y-5 text-center group transition-all duration-300 hover:translate-y-[-6px]">
+<div class="w-full max-w-[240px] sm:max-w-[260px] mx-auto phone-mockup-clay">
+<img alt="Attempting Quiz Screen" class="w-full h-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBbQ2cJsOkQJ7ZXfQeE11Ivkg-0XOmixdyqZOQZ_vBD8rckd6lAJv32TBE_kVigMJ2Qh77_9R-jo0d93slbOBqdoV-oirbBTTqAuS6d-66olLe-c5xRVurbXtFr3xuhcyiXoCEPzsrJXATwhdB8YBUz-iHB6MxsEgyXFER42rfit3JAqKH6ui6SYiUbbTpmq7WtLUXbyVrdokwGcLqYzhuN-_Y6moRA1OAgI8skLuaSNGa-M1ZOOR3n60OXqiapAo8leU">
 </div>
 <div class="pt-2">
 <span class="inline-block px-3 py-1 rounded-full clay-badge-pill text-xs font-bold text-blue-400 uppercase tracking-widest">Step 02</span>
-<h3 class="text-lg font-bold text-white mt-2">Solve with Focus</h3>
-<p class="text-xs text-slate-400 mt-1.5 max-w-xs mx-auto">Minimalist multiple-choice interface designed for high speed and mobile focus.</p>
+<h3 class="text-base sm:text-lg font-bold text-white mt-2">Solve with Focus</h3>
+<p class="text-xs sm:text-sm text-slate-400 mt-1.5 max-w-xs mx-auto">Minimalist multiple-choice interface designed for high speed and mobile focus.</p>
 </div>
 </div>
 <!-- Step 3: Result & Explanations -->
-<div class="clay-step-pedestal p-6 space-y-5 text-center group transition-all duration-300 hover:translate-y-[-6px]">
-<div class="w-56 mx-auto phone-mockup-clay">
-<img alt="Quiz Results Screen" class="w-full h-auto block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrrS1ZI-Ki5UT9OxmPxGG5yo_A_q_PBM3M2H1mUiw7WGJsYh8NHbxKgkweo_gq8JEv3fvKtx0xO_ejCU6XV45U_xRiDzEFOuPKwC2CRhtFnlqYqOBtAO5D5P-YJMu8dPRH2h727Lk2bgsN82kOPA-vxPbxHMPM-cE54a3WCce1up_1wkWCGtxcjKRPKFTCQoqjQxHZr2-aIcjAnjQ0gLgp9ZE3qCyNbC_9gBdhMR4In_xIRiqV8OBs2VcXAzdR_SRn0ns">
+<div class="clay-step-pedestal p-5 sm:p-6 space-y-4 sm:space-y-5 text-center group transition-all duration-300 hover:translate-y-[-6px]">
+<div class="w-full max-w-[240px] sm:max-w-[260px] mx-auto phone-mockup-clay">
+<img alt="Quiz Results Screen" class="w-full h-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRWX7F4eNImvpY08KC2RGeMk7OXtorSU2f4ZLd5QDboQKnvN9lUi8cJ7V3Mm9JwRz2c4VKgjnbqCjaFQW8mTT0WNdxZx409p77w2Tw0Pgfl1-x861JKNKj9zKJDdayRXaxWkSeygDLpi2e7cpKZznV11hqv1s4eXkPvoDfSI4XlZBZ_kowx0uHcZXEzAexXq3__Fhqc-sOAJEcBV86Z6xidMrMir1dg67S1dYOz-__YLsCqK_7OrRlUVZd8Gj-ITWBLAA">
 </div>
 <div class="pt-2">
 <span class="inline-block px-3 py-1 rounded-full clay-badge-pill text-xs font-bold text-blue-400 uppercase tracking-widest">Step 03</span>
-<h3 class="text-lg font-bold text-white mt-2">Review &amp; Earn XP</h3>
-<p class="text-xs text-slate-400 mt-1.5 max-w-xs mx-auto">Detailed answer rationales, concept breakdowns, and immediate profile XP gains.</p>
+<h3 class="text-base sm:text-lg font-bold text-white mt-2">Review &amp; Earn XP</h3>
+<p class="text-xs sm:text-sm text-slate-400 mt-1.5 max-w-xs mx-auto">Detailed answer rationales, concept breakdowns, and immediate profile XP gains.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- FEATURE SECTION 3: MUSIC ROOMS & LIVE VOICE CHAT -->
-<section class="py-24 bg-gradient-to-b from-[#0B1120] to-[#080d19] border-t border-wingle-border overflow-hidden" id="music">
+<section class="py-16 sm:py-24 bg-gradient-to-b from-[#0B1120] to-[#080d19] border-t border-wingle-border overflow-hidden" id="music">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 <!-- Copy Column -->
-<div class="lg:col-span-6 space-y-6">
-<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full clay-badge-pill text-purple-400 text-xs font-bold uppercase tracking-wider"><blockquote class="lQkWXb" data-animation-nesting="" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 4px 40px 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sae="" data-sfc-root="ep" jsaction="" jscontroller="W2LVve#ZSmpJd" jsuid="Hmex0c_2j" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 4px 40px 0px; border-bottom: 0px rgb(230, 232, 240);"><div class="n6owBd awi2gc" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 400; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-hveid="CAAICxAB" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="TDBkbc#Ml18Xb" jsuid="Hmex0c_2k" style="font-size: 16px; margin: 0px; border-bottom: 0px rgb(230, 232, 240);"><span class="rQesXe MPyX" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="tP2kf#s32ZS" jsuid="Hmex0c_2l" style="font-weight: 700; margin: 0px; border-bottom: 0px rgb(230, 232, 240);">LIVE COMMUNITY SPACES<!--TgQPHd|||[]--></span><!--TgQPHd|||[]--></div><!--TgQPHd|||[]--></blockquote><div class="yhAwj" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sfc-cp="" data-sfc-inited="2" data-sfc-root="ep" jsaction="rcuQ6b:&amp;Hmex0c_2m|npT2md" jscontroller="UTzWVc#U8DOt" jsuid="Hmex0c_2m" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 0px; border-bottom: 0px rgb(230, 232, 240);"><!--TgQPHd|||[]--></div><div aria-level="3" aria-owns="action-menu-parent-container" class="otQkpb" data-animation-nesting="" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 20px; font-weight: 600; margin: 24px 0px 12px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sae="" data-sfc-cp="" data-sfc-root="ep" data-wiz-attrbind="aria-level=Hmex0c_2n/fLk2Md" jsaction="" jscontroller="a7qCn#ZxCkTb" jsuid="Hmex0c_2n" role="heading" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 20px; margin: 24px 0px 12px; border-bottom: 0px rgb(230, 232, 240);"></div></div>
-<h2 class="font-bold tracking-tight text-white font-display text-4xl sm:text-5xl"><blockquote class="lQkWXb" data-animation-nesting="" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 4px 40px 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sae="" data-sfc-root="ep" jsaction="" jscontroller="W2LVve#ZSmpJd" jsuid="Hmex0c_2p" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 4px 40px 0px; border-bottom: 0px rgb(230, 232, 240);"><div class="n6owBd awi2gc" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 400; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-hveid="CAAIDRAB" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="TDBkbc#Ml18Xb" jsuid="Hmex0c_2q" style="font-size: 16px; margin: 0px; border-bottom: 0px rgb(230, 232, 240);"><span class="rQesXe MPyX" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="tP2kf#s32ZS" jsuid="Hmex0c_2r" style="font-weight: 700; margin: 0px; border-bottom: 0px rgb(230, 232, 240);">Vibe &amp; Hangout in Real-Time Music Rooms<!--TgQPHd|||[]--></span><!--TgQPHd|||[]--></div><!--TgQPHd|||[]--></blockquote><div class="yhAwj" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sfc-cp="" data-sfc-inited="2" data-sfc-root="ep" jsaction="rcuQ6b:&amp;Hmex0c_2s|npT2md" jscontroller="UTzWVc#U8DOt" jsuid="Hmex0c_2s" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 0px; border-bottom: 0px rgb(230, 232, 240);"><!--TgQPHd|||[]--></div><div aria-level="3" aria-owns="action-menu-parent-container" class="otQkpb" data-animation-nesting="" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 20px; font-weight: 600; margin: 24px 0px 12px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sae="" data-sfc-cp="" data-sfc-root="ep" data-wiz-attrbind="aria-level=Hmex0c_2t/fLk2Md" jsaction="" jscontroller="a7qCn#ZxCkTb" jsuid="Hmex0c_2t" role="heading" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 20px; margin: 24px 0px 12px; border-bottom: 0px rgb(230, 232, 240);"></div></h2>
-<p class="text-slate-300 text-base sm:text-lg leading-relaxed"></p><blockquote class="lQkWXb" data-animation-nesting="" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 4px 40px 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sae="" data-sfc-root="ep" jsaction="" jscontroller="W2LVve#ZSmpJd" jsuid="Hmex0c_2v" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; margin: 4px 40px 0px; border-bottom: 0px rgb(230, 232, 240);"><div class="n6owBd awi2gc" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 400; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-hveid="CAAIDxAB" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="TDBkbc#Ml18Xb" jsuid="Hmex0c_2w" style="font-size: 16px; margin: 0px; border-bottom: 0px rgb(230, 232, 240);"><span class="rQesXe MPyX" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="tP2kf#s32ZS" jsuid="Hmex0c_2x" style="font-weight: 700; margin: 0px; border-bottom: 0px rgb(230, 232, 240);">Every community gets its own lounge! Drop into a room to stream your favorite tracks, chat in real-time, or hop on the mic to talk with multiple peers simultaneously. With seamless peer-to-peer connections, it’s the ultimate space to vibe, discuss, and connect.<!--TgQPHd|||[]--></span><!--TgQPHd|||[]--></div><!--TgQPHd|||[]--></blockquote><div class="yhAwj" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sfc-cp="" data-sfc-inited="2" data-sfc-root="ep" jsaction="rcuQ6b:&amp;Hmex0c_2y|npT2md" jscontroller="UTzWVc#U8DOt" jsuid="Hmex0c_2y" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; margin: 0px; border-bottom: 0px rgb(230, 232, 240);"><!--TgQPHd|||[]--></div><hr class="s6NV4e" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 32px 0px; text-decoration: none; border-bottom: 0px rgb(128, 128, 128);" data-processed="true" data-sae="" data-sfc-pl="|||[]" data-sfc-root="ep" jsaction="" jscontroller="gWGJ0d#iOlsLd" jsuid="Hmex0c_2z" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; margin: 32px 0px; border-bottom: 0px rgb(128, 128, 128);"><div aria-owns="action-menu-parent-container" class="n6owBd awi2gc" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 400; margin: 12px 0px 16px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-hveid="CAAIERAA" data-processed="true" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="TDBkbc#Ml18Xb" jsuid="Hmex0c_30" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; margin: 12px 0px 16px; border-bottom: 0px rgb(230, 232, 240);"></div><p class=""></p>
-<!-- Audio Waveform Visual Animation -->
+<div class="lg:col-span-6 space-y-5 sm:space-y-6 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full clay-badge-pill text-purple-400 text-xs font-bold uppercase tracking-wider">
+          LIVE COMMUNITY SPACES
+        </div>
+<h2 class="font-bold tracking-tight text-white font-display text-2xl sm:text-4xl lg:text-5xl leading-tight">
+          Vibe &amp; Hangout in Real-Time Music Rooms
+        </h2>
+<p class="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          Every community gets its own lounge! Drop into a room to stream your favorite tracks, chat in real-time, or hop on the mic to talk with multiple peers simultaneously. With seamless peer-to-peer connections, it’s the ultimate space to vibe, discuss, and connect.
+        </p>
 </div>
 <!-- Phone Mockup Column -->
 <div class="lg:col-span-6 flex justify-center">
-<div class="w-64 sm:w-72 phone-mockup-clay relative">
-<img alt="Music &amp; Chat Room Screen" class="w-full h-auto block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDItZBblXl5aIJYo0q7Tv29Mo4wQ0ze6Hdg9XIuBJ3vpSDdP3soiKUZpGpRKSJgh5orSZmcoYZiSxSEjX87-EwTvpir8AocaPeGDMvFGimXPlk3AGCD0awD2Wqca3otAvEjA2ZKzZL2PdWEz8asAjd_oCHz417fr_26v5ax3TxoJjxtoutsvVRiJ67IWTj9Nz-dcJLwSWkOscB27nV6WjrnVJce8zfcFkpl2A1ip1GKaAtqRB4pFcPC05TiTBWeFICmdck">
+<div class="w-full max-w-[260px] sm:max-w-[290px] phone-mockup-clay relative">
+<img alt="Music &amp; Chat Room Screen" class="w-full h-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHsuP0LndEeJbj2Wo0OuvQZHV3FIBsaCadiWN7Hig8clCoUZiHDMYU-3WT4LRQ3F8QNhEfZpzGTJeTwPio18pAvmshVwVPLXQcB9fIushmRMB6vfifN-YDMVyTCXz4pCpxMeIENY8vSqTGbAlxoNq0S8Qv9PyVXy0oNlgnDHa1TFcg_IU_8OP1sgqu2X2uIy28fdfntDPLUXCsK5j6yyynSp5c85oNzTzqSQ7nH-xoseQoIooIe28AeqmtlIHBkKYaUYE">
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- FEATURE SECTION 4: LEADERBOARD & XP SYSTEM -->
-<section class="py-24 bg-slate-900/40 border-t border-wingle-border" id="leaderboard">
+<section class="py-16 sm:py-24 bg-slate-900/40 border-t border-wingle-border" id="leaderboard">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 <!-- Mockup Display -->
-<div class="lg:col-span-6 flex justify-center">
-<div class="w-64 sm:w-72 phone-mockup-clay relative group">
-<img alt="WingleHub Leaderboard" class="w-full h-auto block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-qcA9KHY1xn3eAbgit_aAOKX_RgVudUUc0gumaKof-HksDm0Kx4SqzMbhDnROUAhtujzznbhiwpUcYFnH-2Fq3iK7iG6upLYVSBNJ9_n17-DygFhpv0BlniYc7O8esC_1zZvWmyhnc3AdnB0g1K5xSyaolYKw5Dj7t4w7aL3YRdnpZcVUNaijzvE7oRbGRaSyoFKwk89DMk_wA8yTs33_tsIUGUF2yP65Fghep91avXBAML0Et-HWcelBYogw5ese2tw">
-<!-- Floating XP Badge Overlay (Rich Clay Pill) -->
-
+<div class="lg:col-span-6 order-2 lg:order-1 flex justify-center">
+<div class="w-full max-w-[260px] sm:max-w-[290px] phone-mockup-clay relative group">
+<img alt="WingleHub Leaderboard" class="w-full h-auto object-contain block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPiZ5J352kjSWt8EnUlh3tMWi-dWW7eBo8wge2JnXEW68sno44mX-RnQ2XtB9zvlX75EocVt5HZeVB3pdDh-clUV5lP4sopZ7iO_0e84fvmgi9HJdEqd6EmqVqL1Y3JTOhMxYsN0FID4omiXWripExuxg-hN1K8WlvWCzMW-1LS6dtQCd6spVkZdPj7NA3YNqc4nB-csewcw3LYKqmYnG9eTXqXwI57dDXpAogoFTvTUcXh6oH7fo_WbbkudI72cMGlEo">
 </div>
 </div>
 <!-- Copy Column -->
-<div class="lg:col-span-6 space-y-6">
-<div class="w-14 h-14 rounded-2xl clay-badge-icon flex items-center justify-center text-amber-400">
-<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<div class="lg:col-span-6 order-1 lg:order-2 space-y-5 sm:space-y-6 text-center lg:text-left">
+<div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto lg:mx-0 rounded-2xl clay-badge-icon flex items-center justify-center text-amber-400">
+<svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </div>
-<h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white font-display">
-            Celebrate Progress with Hub Ranks</h2>
-<p class="text-slate-300 text-base sm:text-lg leading-relaxed"></p><blockquote class="lQkWXb" data-animation-nesting="" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 4px 40px 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sae="" data-sfc-root="ep" jsaction="" jscontroller="W2LVve#ZSmpJd" jsuid="a57kFb_2p" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; margin: 4px 40px 0px; border-bottom: 0px rgb(230, 232, 240);"><div class="n6owBd awi2gc" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 400; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-hveid="CAAIDhAB" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="TDBkbc#Ml18Xb" jsuid="a57kFb_2q" style="font-size: 16px; margin: 0px; border-bottom: 0px rgb(230, 232, 240);"><span class="rQesXe MPyX" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 16px; font-weight: 700; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-sfc-cp="" data-sfc-root="ep" jsaction="" jscontroller="tP2kf#s32ZS" jsuid="a57kFb_2r" style="font-weight: 700; margin: 0px; border-bottom: 0px rgb(230, 232, 240);">Gamify your daily social and learning routine. Rank among the top creators and learners across WingleHub, maintain and unlock exclusive profile badges as you level up your community journey.<!--TgQPHd|||[]--></span><!--TgQPHd|||[]--></div><!--TgQPHd|||[]--></blockquote><div class="yhAwj" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; font-weight: 400; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sfc-cp="" data-sfc-inited="2" data-sfc-root="ep" jsaction="rcuQ6b:&amp;a57kFb_2s|npT2md" jscontroller="UTzWVc#U8DOt" jsuid="a57kFb_2s" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 14px; margin: 0px; border-bottom: 0px rgb(230, 232, 240);"><!--TgQPHd|||[]--></div><div aria-level="3" aria-owns="action-menu-parent-container" class="otQkpb" data-animation-nesting="" data-complete="true" data-copy-service-computed-style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 20px; font-weight: 600; margin: 24px 0px 12px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);" data-processed="true" data-sae="" data-sfc-cp="" data-sfc-root="ep" data-wiz-attrbind="aria-level=a57kFb_2t/fLk2Md" jsaction="" jscontroller="a7qCn#ZxCkTb" jsuid="a57kFb_2t" role="heading" style="font-family: &quot;Google Sans&quot;, Arial, sans-serif, &quot;Noto Color Emoji&quot;; font-size: 20px; font-weight: 600; margin: 24px 0px 12px; border-bottom: 0px rgb(230, 232, 240);"></div><p class=""></p>
-<div class="grid grid-cols-2 gap-4 pt-2">
-
-
-</div>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white font-display">
+          Celebrate Progress with Hub Ranks
+        </h2>
+<p class="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          Gamify your daily social and learning routine. Rank among the top creators and learners across WingleHub, maintain streaks, and unlock exclusive profile badges as you level up your community journey.
+        </p>
 </div>
 </div>
 </div>
 </section>
-<!-- ================================================== -->
-<!-- CLAY-STYLE CONTACT CARDS -->
-<!-- ================================================== -->
-<section class="py-24 bg-gradient-to-b from-[#090E17] via-[#0d1626] to-[#080d17] border-t border-wingle-border" id="contact">
+<!-- CONTACT SECTION -->
+<section class="py-16 sm:py-24 bg-gradient-to-b from-[#090E17] via-[#0d1626] to-[#080d17] border-t border-wingle-border" id="contact">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full clay-badge-pill text-blue-400 text-xs font-bold uppercase tracking-wider">Get in Touch</div>
-<h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white font-display">Contact Us</h2>
-<p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto">Reach out directly or join our community channels across your favorite platforms.</p>
+<div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
+<div class="inline-flex items-center gap-2 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full clay-badge-pill text-blue-400 text-xs font-bold uppercase tracking-wider">Get in Touch</div>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white font-display">Contact Us</h2>
+<p class="text-slate-300 text-sm sm:text-base lg:text-lg max-w-xl mx-auto">Reach out directly or join our community channels across your favorite platforms.</p>
 </div>
-<!-- Four Large Clay-Style Contact Cards Grid -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+<!-- Four Responsive Clay-Style Contact Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
 <!-- CARD 1: GITHUB -->
-<a class="clay-surface-light p-8 flex flex-col items-center justify-center text-center gap-4 group transition-all duration-300 relative overflow-hidden" href="[GITHUB_LINK]" rel="noopener noreferrer" target="_blank">
-<div class="w-16 h-16 rounded-2xl clay-disc-light flex items-center justify-center text-slate-900 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-<svg class="w-8 h-8 fill-current text-slate-900" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+<a class="clay-surface-light p-6 sm:p-8 flex flex-col items-center justify-center text-center gap-3.5 sm:gap-4 group transition-all duration-300 relative overflow-hidden" href="https://github.com/anujrawat2007" rel="noopener noreferrer" target="_blank">
+<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl clay-disc-light flex items-center justify-center text-slate-900 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+<svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current text-slate-900" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
 </div>
-<span class="text-lg font-bold text-slate-900 group-hover:text-wingle-blue transition-colors">Follow us</span>
+<div>
+<span class="block text-base sm:text-lg font-bold text-slate-900 group-hover:text-wingle-blue transition-colors">GitHub</span>
+<span class="block text-xs sm:text-sm font-medium text-slate-500 mt-0.5">@anujrawat2007</span>
+</div>
 </a>
 <!-- CARD 2: INSTAGRAM -->
-<a class="clay-surface-light p-8 flex flex-col items-center justify-center text-center gap-4 group transition-all duration-300 relative overflow-hidden" href="[INSTAGRAM_LINK]" rel="noopener noreferrer" target="_blank">
-<div class="w-16 h-16 rounded-2xl clay-disc-light flex items-center justify-center text-pink-600 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-<svg class="w-8 h-8 fill-current text-pink-600" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+<a class="clay-surface-light p-6 sm:p-8 flex flex-col items-center justify-center text-center gap-3.5 sm:gap-4 group transition-all duration-300 relative overflow-hidden" href="https://instagram.com/ark_rawat_" rel="noopener noreferrer" target="_blank">
+<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl clay-disc-light flex items-center justify-center text-pink-600 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+<svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current text-pink-600" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
 </div>
-<span class="text-lg font-bold text-slate-900 group-hover:text-pink-600 transition-colors">Follow us</span>
+<div>
+<span class="block text-base sm:text-lg font-bold text-slate-900 group-hover:text-pink-600 transition-colors">Instagram</span>
+<span class="block text-xs sm:text-sm font-medium text-slate-500 mt-0.5">@ark_rawat_</span>
+</div>
 </a>
-<!-- CARD 3: TELEGRAM -->
-<a class="clay-surface-light p-8 flex flex-col items-center justify-center text-center gap-4 group transition-all duration-300 relative overflow-hidden" href="[TELEGRAM_LINK]" rel="noopener noreferrer" target="_blank">
-<div class="w-16 h-16 rounded-2xl clay-disc-light flex items-center justify-center text-sky-500 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-<svg class="w-8 h-8 fill-current text-sky-500" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.197 1.006.128.832.922z"></path></svg>
+<!-- CARD 3: WHATSAPP -->
+<a class="clay-surface-light p-6 sm:p-8 flex flex-col items-center justify-center text-center gap-3.5 sm:gap-4 group transition-all duration-300 relative overflow-hidden" href="https://wa.me/919336806982" rel="noopener noreferrer" target="_blank">
+<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl clay-disc-light flex items-center justify-center text-[#25D366] group-hover:scale-110 transition-transform duration-300 shadow-sm">
+<svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current text-[#25D366]" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
 </div>
-<span class="text-lg font-bold text-slate-900 group-hover:text-sky-500 transition-colors">Send messages</span>
+<div>
+<span class="block text-base sm:text-lg font-bold text-slate-900 group-hover:text-[#25D366] transition-colors">WhatsApp</span>
+<span class="block text-xs sm:text-sm font-medium text-slate-500 mt-0.5">+91 9336806982</span>
+</div>
 </a>
 <!-- CARD 4: EMAIL -->
-<a class="clay-surface-light p-8 flex flex-col items-center justify-center text-center gap-4 group transition-all duration-300 relative overflow-hidden" href="mailto:[EMAIL_ADDRESS]">
-<div class="w-16 h-16 rounded-2xl clay-disc-light flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-<svg class="w-8 h-8 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<a class="clay-surface-light p-6 sm:p-8 flex flex-col items-center justify-center text-center gap-3.5 sm:gap-4 group transition-all duration-300 relative overflow-hidden" href="mailto:winglehubofficial@gmail.com">
+<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl clay-disc-light flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+<svg class="w-7 h-7 sm:w-8 sm:h-8 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
-<span class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Send email</span>
+<div>
+<span class="block text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Send Email</span>
+<span class="block text-xs sm:text-sm font-medium text-slate-500 mt-0.5">winglehubofficial@gmail.com</span>
+</div>
 </a>
 </div>
 </div>
 </section>
-<!-- ================================================== -->
-<!-- SECTION 20 — FINAL CTA -->
-<!-- ================================================== -->
-<section class="relative py-28 lg:py-36 overflow-hidden border-t border-wingle-border">
-<!-- Subtle enlarged crop background of ACTUAL WingleHub screenshot with dark overlay -->
-<div class="absolute inset-0 z-0 overflow-hidden">
-<img alt="WingleHub App Background Experience" class="w-full h-full object-cover object-center scale-125 filter blur-sm opacity-25" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVcGOlHA7x7n65lR_MSrzj6xQPl9q3-ScZrTNVsZxdutnOR2zKdCdO7F3ozByI2xx4S72cczWZ2tYte9Q5LxVEv3i1inspLlcC5sH-Hal3ZmpevavJFBKipQLL1dbDJiVc1juXgbUhzHefg2L5Sd5XSTAwZowlB-MHnjxuKdOKYqCFa7twWNNnAODsjhPQIFnRA9nXsHyGIqFphxm7BmlG6GjxxDAZ1wLag8PBdOTRsrEnny_m0yBesiX3XAqRMUxZtbM">
-<!-- Dark gradient overlays for high readability and premium aesthetic -->
-<div class="absolute inset-0 bg-gradient-to-t from-wingle-navy via-wingle-navy/90 to-wingle-navy/85"></div>
-<div class="absolute inset-0 bg-radial from-blue-900/20 via-transparent to-black/60"></div>
-</div>
+<!-- FINAL CTA -->
+<section class="relative py-20 sm:py-28 lg:py-36 overflow-hidden border-t border-wingle-border">
 <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-<!-- Command Clay CTA Container -->
-<div class="clay-cta-card p-10 sm:p-16 text-center space-y-8">
-<div class="w-16 h-16 mx-auto rounded-3xl bg-white p-2.5 shadow-2xl flex items-center justify-center transform hover:scale-105 transition-transform duration-300" style="box-shadow: inset 2px 2px 4px rgba(255,255,255,0.9), inset -2px -2px 5px rgba(148,163,184,0.4), 0 12px 24px rgba(0,0,0,0.3);">
-<img alt="WingleHub Emblem" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB81T7KaR8-Q11HebtXKnBirbJzWyfcGK3ckLQVOhREYXvoA3jFEa_pKamUQ7wP6H6BaZl3szh9246Xxyzcdk91m6QR4Ldjl6OZRt4TN-COCP-U0HC_ueaYmR5dV9ZLVWMuQ2A-RfRYtDXUqHP2yXOwIMLYD-CXZe6YhBc545x7manDDKUWN60ZW0XZd1Y1ymhWdQxmo060UYHh5g_EuzCNUPRKQYJCs80I8_Rg4Y4921fdSyFBWJu6AHQbP97Csihm6fE">
+<div class="clay-cta-card p-6 sm:p-12 lg:p-16 text-center space-y-6 sm:space-y-8">
+<div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-3xl bg-white p-2 sm:p-2.5 shadow-2xl flex items-center justify-center transform hover:scale-105 transition-transform duration-300" style="box-shadow: inset 2px 2px 4px rgba(255,255,255,0.9), inset -2px -2px 5px rgba(148,163,184,0.4), 0 12px 24px rgba(0,0,0,0.3);">
+<img alt="WingleHub Emblem" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRD9RDl9aJS6gsSXLlcRHPKV-3sxcJheNlLdQFzJv-N0EfztmXpAWJxH5o8020QaRjcFXr9XBzTMA5M5irog5MAGZXQ_Zp7oNwvZsEe9Fr0Ijm-eoITWPHBvZJL9OMHyQvHBfXqU_D6y7AhMvNKIgDSXvzcm8U1gbh5qGrJ8Ov8EvHH_p7J9IVUiUBVTy0OL0A6JeogrMnzz2Gx219aQWYpxMcN1MpmNGqQX9QVfLcSS7yZEpuaSximHjJBgbexxWFMCQ">
 </div>
-<h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight font-display leading-[1.15] max-w-4xl mx-auto">
+<h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight font-display leading-[1.15] max-w-4xl mx-auto">
           Create your space. Find your people.
         </h2>
-<p class="text-lg sm:text-xl lg:text-2xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+<p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
           Communities, quizzes, music, conversations and connections—all in WingleHub.
         </p>
-<div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-<a class="clay-pill-btn w-full sm:w-auto px-12 py-5 rounded-full text-white font-extrabold text-lg flex items-center justify-center gap-3" href="[APP_DOWNLOAD_LINK]">
-<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"></path></svg>
+<div class="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="clay-pill-btn w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-full text-white font-extrabold text-base sm:text-lg flex items-center justify-center gap-3" href="[APP_DOWNLOAD_LINK]">
+<svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current shrink-0" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"></path></svg>
 <span class="">Download WingleHub</span>
 </a>
 </div>
-
 </div>
 </div>
 </section>
-<!-- ================================================== -->
 <!-- FOOTER -->
-<!-- ================================================== -->
 <footer class="bg-[#060A12] border-t border-wingle-border text-slate-400 text-sm">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
-<!-- Left Column: Brand & Bio -->
-<div class="lg:col-span-4 space-y-4">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
+<!-- Brand & Bio -->
+<div class="sm:col-span-2 lg:col-span-5 space-y-4">
 <a class="flex items-center gap-3" href="#">
 <div class="w-9 h-9 rounded-2xl bg-white p-1 flex items-center justify-center shadow-md" style="box-shadow: inset 1px 1px 3px rgba(255,255,255,0.9), inset -1px -1px 3px rgba(148,163,184,0.4);">
-<img alt="WingleHub Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFXkODIFpRLpwYRfNbuSjmN5jXxMKjm5tlzL1lgzw4Rga-Hc3pJLwG9eVnBlPmUPFQ70xqO8QqCiu--0sC2_DjnaWSZOifl1AOOt1xPMrHc3ZwCDoWkrX_135vapCdZ1zl5ds3TQnk1fwLTJTDMxvRAXznWkw2Fph5VNvo4F4k3sqm2AdoFj9jbgCD9pVtqOHPSqYvXqb_GJbB84u2uL9m7QfxoTJy3xb54XLqbQPcyWDxHugTWUDhgynGHdZIga5vz1Q">
+<img alt="WingleHub Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9HdpdzTcRGN3TwYWSiHCTQMBBENHLowU-wZrFc9Fm0siRsCutwxhQ0QOPj7XWcxyV93CWBinjnHpJe8-9npaQrF_buHeN-1qJ4n4eH3n6e-tUtYrTUvSoICe--NtQLyXgFV8y2YHbbhENK9h22AFNxNqpFo9g2G7m-HoRyjW9q_wSIbuTkjVmOZuV-EZpEMcjoAPEOfdarWnS331tAFv4p-g7V9F6fnDpp6oGwPVz1qSoHZJmSLMFhlFoSkpt5zLu8x8">
 </div>
 <span class="text-xl font-bold tracking-tight text-white font-display">WingleHub</span>
 </a>
 <p class="text-slate-400 text-sm max-w-sm leading-relaxed">Your ultimate community, quiz, and hangout hub.</p>
-<div class="pt-2">
+<div class="pt-1">
 <a class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold text-sm group" href="[APP_DOWNLOAD_LINK]">
 <span class="">Download WingleHub</span>
 <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </a>
 </div>
 </div>
-<!-- Navigation Columns -->
-<div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
-<!-- PRODUCT -->
-<div class="space-y-4">
-<h4 class="text-xs font-bold uppercase tracking-widest text-white font-display">PRODUCT</h4>
+<!-- Product Links -->
+<div class="space-y-4 lg:col-span-4">
+
 <ul class="space-y-2.5 text-sm">
-<li class=""><a class="hover:text-white transition-colors" href="#features">Features</a></li>
-<li class=""><a class="hover:text-white transition-colors" href="#communities">Communities</a></li>
-<li class=""><a class="hover:text-white transition-colors" href="#quizzes">Quizzes</a></li>
-<li class=""><a class="hover:text-white transition-colors" href="#music">Music Rooms</a></li>
-<li class=""><a class="hover:text-white transition-colors" href="#messages">Messaging</a></li>
-<li class=""><a class="hover:text-white transition-colors" href="#leaderboard">Leaderboard</a></li>
+<li class=""></li>
+<li class=""></li>
+<li class=""></li>
+<li class=""></li>
 </ul>
 </div>
-<!-- COMPANY -->
-<!-- SOCIAL -->
-<div class="space-y-4 col-span-2 sm:col-span-1">
-<h4 class="text-xs font-bold uppercase tracking-widest text-white font-display">SOCIAL</h4>
+<!-- Social Links -->
+<div class="space-y-4 lg:col-span-3"><h4 class="text-xs font-bold uppercase tracking-widest text-white font-display">contact us</h4>
 <ul class="space-y-2.5 text-sm">
-<li class=""><a class="hover:text-white transition-colors" href="[GITHUB_LINK]" rel="noopener noreferrer" target="_blank">GitHub</a></li>
-<li class=""><a class="hover:text-white transition-colors" href="[INSTAGRAM_LINK]" rel="noopener noreferrer" target="_blank">Instagram</a></li>
-<li class=""><a class="hover:text-white transition-colors" href="[TELEGRAM_LINK]" rel="noopener noreferrer" target="_blank">Telegram</a></li>
-</ul>
-</div>
-</div>
+<li class=""><a class="hover:text-white transition-colors" href="https://github.com/anujrawat2007" rel="noopener noreferrer" target="_blank">GitHub (@anujrawat2007)</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="https://instagram.com/ark_rawat_" rel="noopener noreferrer" target="_blank">Instagram (@ark_rawat_)</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="https://wa.me/919336806982" rel="noopener noreferrer" target="_blank">WhatsApp (+91 9336806982)</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="mailto:winglehubofficial@gmail.com">Email</a></li>
+</ul></div>
 </div>
 <!-- Bottom Bar -->
-<div class="pt-12 mt-12 border-t border-wingle-border/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+<div class="pt-8 sm:pt-12 mt-8 sm:mt-12 border-t border-wingle-border/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
 <p class="">© 2026 WingleHub. All rights reserved.</p>
+
 </div>
 </div>
 </footer>
